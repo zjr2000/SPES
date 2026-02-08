@@ -1,8 +1,7 @@
 <div align="center">
 
-# ⚡ SPES: Sparse Parameter Expert Sync
-### Pretraining Large Language Models using Distributed GPUs
-#### A Memory-Efficient Decentralized Paradigm
+# ⚡ SPES: SParse Expert Synchronization
+### Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm
 
 [![GitHub](https://img.shields.io/badge/GitHub-SPES-blue?logo=github)](https://github.com/zjr2000/SPES)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv)](https://arxiv.org/abs/xxxx.xxxxx)
