@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message UploadChunkRequest {
+    int32 peer_id = 1;
+    int32 step = 2;
+    int32 chunk_id = 3;
+    int32 total_chunks = 4;
+    bytes chunk_data = 5;
+}
+message UploadChunkResponse {
+    bool success = 1;
+}
+message DownloadChunkRequest {
+    int32 peer_id = 1;
+    int32 step = 2;
+    int32 chunk_id = 3;
+}
+message DownloadChunkResponse {
+    bytes chunk_data = 1;
+    bool last_chunk = 2;
+    bool ready = 3;
+}
+
+service FederatedServer {
+    rpc UploadChunk(stream UploadChunkRequest) returns (UploadChunkResponse);
+    rpc DownloadChunk(DownloadChunkRequest) returns (DownloadChunkResponse);
+    // 你原有的UploadWeights/DownloadWeights可保留兼容小模型
+}

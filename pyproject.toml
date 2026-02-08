@@ -1,0 +1,181 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spes"
+dynamic = ["version"]
+readme = "README.md"
+description = "Implementation for paper "SPES: Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm". Based on OLMo codebase."
+authors = [
+    { name = "Jinrui Zhang", email = "jin-rui.zhang@connect.polyu.hk" }
+]
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy<2",
+    "torch==2.5.1",
+    "ai2-olmo-core==1.8.0",
+    "omegaconf",
+    "rich",
+    "boto3",
+    "google-cloud-storage",
+    "tokenizers",
+    "packaging",
+    "cached_path>=1.6.2",
+    "transformers",
+    "importlib_resources",
+    "megablocks==0.7.0",
+    "grouped_gemm==0.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy>=1.0,<1.4",
+    "black>=23.1,<24.0",
+    "isort>=5.12,<5.13",
+    "pytest",
+    "pytest-sphinx",
+    "twine>=1.11.0",
+    "setuptools",
+    "wheel",
+    "build",
+]
+train = [
+    "swanlab",
+    "wandb",
+    "beaker-gantry",
+    "click",
+    "torchmetrics",
+    "smashed[remote]>=0.21.1",
+    "safetensors",
+    "datasets",
+    "scikit-learn",
+    "msgspec>=0.14.0",
+]
+all = [
+    "spes[dev,train]",
+]
+figures = [
+    "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://github.com/zjr2000/SPES"
+Repository = "https://github.com/zjr2000/SPES"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+spes = ["py.typed"]
+olmo_data = ["**"]
+
+[tool.setuptools.dynamic]
+version = { attr = "spes.version.VERSION" }
+
+[tool.setuptools.packages.find]
+include = ["spes*", "olmo_data*"]
+exclude = [
+    "*.tests",
+    "*.tests.*",
+    "tests.*",
+    "tests",
+    "test_fixtures",
+    "test_fixtures.*",
+    "docs*",
+    "scripts*",
+    "spes_tokenizer.*",
+    "evaluation.*",
+    "pretrain_data.*",
+    "tmp_*",
+    "inference.*",
+]
+
+[tool.black]
+line-length = 115
+include = '\.pyi?$'
+exclude = '''
+(
+      __pycache__
+    | \.git
+    | \.mypy_cache
+    | \.pytest_cache
+    | \.vscode
+    | \.venv
+    | \bdist\b
+    | \bdoc\b
+    | pretrain_data/
+    | inference/
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+extend_skip = ["pretrain_data", "tokenizer"]
+
+[tool.ruff]
+line-length = 115
+lint.ignore = ["F403", "F405", "E501"]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".venv",
+    "venv",
+    ".mypy_cache",
+    "__pycache__",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "doc",
+    "pretrain_data",
+    "inference",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/__init__.py" = ["F401"]
+
+[tool.pyright]
+reportPrivateImportUsage = false
+exclude = ["pretrain_data/", "tokenizer/"]
+
+[tool.mypy]
+ignore_missing_imports = true
+no_site_packages = true
+check_untyped_defs = true
+exclude = ["pretrain_data/", "inference/compression/dependencies/", "inference/efficiency/dependencies/"]
+no_namespace_packages = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+strict_optional = false
+
+[tool.pytest.ini_options]
+testpaths = "tests/"
+python_classes = [
+  "Test*",
+  "*Test",
+]
+log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+log_level = "DEBUG"
+markers = [
+    "gpu",
+]
+filterwarnings = [
+    'ignore::FutureWarning:huggingface_hub\.file_download',
+    'ignore::DeprecationWarning:pkg_resources',
+    'ignore::DeprecationWarning:google\.rpc',
+]
