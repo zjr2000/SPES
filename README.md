@@ -166,6 +166,12 @@ bash eval_scripts/eval_full.sh <MODEL_PATH> <MODEL_NAME>
 
 ---
 
+## 📧 Contact
+
+**Email:** [jin-rui.zhang@connect.polyu.hk]
+
+---
+
 ## 🙏 Acknowledgements
 
 This project stands on the shoulders of giants. We explicitly thank the following projects and teams:
