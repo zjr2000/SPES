@@ -4,7 +4,7 @@
 ### Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm
 
 [![GitHub](https://img.shields.io/badge/GitHub-SPES-blue?logo=github)](https://github.com/zjr2000/SPES)
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv)](https://arxiv.org/abs/xxxx.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv)](https://arxiv.org/abs/2602.11543)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 **SPES** (**SP**arse **E**xpert **S**ync) is a cutting-edge, memory-efficient decentralized training framework designed for pretraining MoE LLMs across geographically distributed GPU nodes.
 
-Unlike conventional paradigms that demand high-bandwidth interconnects, SPES enables the collaborative pretraining of **Mixture-of-Experts (MoE)** models where nodes operate semi-independently.
+Unlike conventional paradigms that demand high-bandwidth interconnects, SPES enables the collaborative pretraining of **Mixture-of-Experts** models where nodes operate semi-independently.
 
 ### 🌟 Key Features
 
