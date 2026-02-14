@@ -3,6 +3,15 @@
 # ⚡ SPES: SParse Expert Synchronization
 ### Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm
 
+**Jinrui Zhang**$^{1,2}$, **Chaodong Xiao**$^{1,2}$, **Aoqi Wu**$^{1,2}$, **Xindong Zhang**$^2$, **Lei Zhang**$^{1,2}$
+
+<sup>1</sup>Department of Computing, The Hong Kong Polytechnic University  
+<sup>2</sup>OPPO Research Institute
+
+📧 [jin-rui.zhang@connect.polyu.hk](mailto:jin-rui.zhang@connect.polyu.hk)
+
+<br>
+
 [![GitHub](https://img.shields.io/badge/GitHub-SPES-blue?logo=github)](https://github.com/zjr2000/SPES)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv)](https://arxiv.org/abs/2602.11543)
 
@@ -168,9 +177,24 @@ bash eval_scripts/eval_full.sh <MODEL_PATH> <MODEL_NAME>
 
 ## 📧 Contact
 
+Feel free to open an issue or email to us if you have any questions!
+
 **Email:** [jin-rui.zhang@connect.polyu.hk]
 
 ---
+
+## 📝 Citation
+
+If you find SPES useful in your research, please consider citing:
+
+```bibtex
+@article{zhang2026spes,
+  title={Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm},
+  author={Zhang, Jinrui and Xiao, Chaodong and Wu, Aoqi and Zhang, Xindong and Zhang, Lei},
+  journal={arXiv preprint arXiv:2602.11543},
+  year={2026}
+}
+```
 
 ## 🙏 Acknowledgements
 
