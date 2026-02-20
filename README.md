@@ -188,7 +188,7 @@ Feel free to open an issue or email to us if you have any questions!
 If you find SPES useful in your research, please consider citing:
 
 ```bibtex
-@article{zhang2026spes,
+@article{zhang2026pretraining,
   title={Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm},
   author={Zhang, Jinrui and Xiao, Chaodong and Wu, Aoqi and Zhang, Xindong and Zhang, Lei},
   journal={arXiv preprint arXiv:2602.11543},
