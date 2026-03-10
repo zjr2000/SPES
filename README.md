@@ -14,6 +14,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-SPES-blue?logo=github)](https://github.com/zjr2000/SPES)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv)](https://arxiv.org/abs/2602.11543)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/collections/zjr2000/spes)
 
 </div>
 
@@ -39,8 +40,20 @@ Unlike conventional paradigms that demand high-bandwidth interconnects, SPES ena
 ## 🚧 Roadmap & Status
 
 - [x] **Release Training Code**
-- [ ] Release pretrained model checkpoints & training logs
-- [ ] Add detailed documentation for training and evaluation scripts
+- [x] Release pretrained model checkpoints
+- [ ] Release training logs
+
+---
+
+## 🤗 Model Weights
+
+Pretrained checkpoints are available in the [SPES Hugging Face collection](https://huggingface.co/collections/zjr2000/spes).
+
+| Model | Description | Weights |
+| :--- | :--- | :--- |
+| `SPES-2B` | 2B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-2B) |
+| `SPES-7B` | 7B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-7B) |
+| `SPES-9B` | 9B model initialized from Qwen3-1.7B. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-9B) |
 
 ---
 
