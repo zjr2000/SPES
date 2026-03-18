@@ -49,12 +49,11 @@ Unlike conventional paradigms that demand high-bandwidth interconnects, SPES ena
 
 Pretrained checkpoints are available in the [SPES Hugging Face collection](https://huggingface.co/collections/zjr2000/spes).
 
-| Model | Description | Weights |
-| :--- | :--- | :--- |
-| `SPES-2B` | 2B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-2B) |
-| `SPES-7B` | 7B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-7B) |
-| `SPES-9B` | 9B model initialized from Qwen3-1.7B. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-9B) |
-
+| Model | Description | Weights | Log |
+| :--- | :--- | :--- | :--- |
+| `SPES-2B` | 2B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-2B) |  |
+| `SPES-7B` | 7B model trained from scratch. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-7B) |  |
+| `SPES-9B` | 9B model initialized from Qwen3-1.7B. | [🤗 Hugging Face](https://huggingface.co/zjr2000/SPES-9B) | [📈 Weights & Biases Log](https://wandb.ai/zjr2000/spes/reports/SPES-9B-Train-Log--VmlldzoxNjI0MzA2Ng?accessToken=ghf43wkxavw7qnoolb9kcaeji2y8yg2dunvzowdid7jn02set7c10e1vc0t1bzi9) |
 ---
 
 ## 🔧 Installation
